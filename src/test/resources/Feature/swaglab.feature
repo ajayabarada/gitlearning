@@ -1,6 +1,6 @@
 Feature: user login into swaglab application
 
-Scenario Outline: Registered user try to login into application
+Scenario Outline: Registered user try to login into application for successful login
 Given open the application
 When enter the username "<username>"
 And enter the password "<password>"
