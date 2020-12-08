@@ -1,0 +1,37 @@
+Feature: user login into swaglab application
+
+  Scenario Outline: Registered user try to login into application [90m# src/test/resources/Feature/swaglab.feature:3[0m
+    [36mGiven [0m[36mopen the application[0m
+    [36mWhen [0m[36menter the username "<username>"[0m
+    [36mAnd [0m[36menter the password "<password>"[0m
+    [36mAnd [0m[36mclick on login button[0m
+    [36mThen [0m[36muser should see the products page[0m
+
+    Examples: 
+
+  Scenario Outline: Registered user try to login into application [90m# src/test/resources/Feature/swaglab.feature:12[0m
+    [32mGiven [0m[32mopen the application[0m                                    [90m# StepDefination.startbrowser()[0m
+    [32mWhen [0m[32menter the username "[0m[32m[1mstandard_user[0m[32m"[0m                       [90m# StepDefination.enter_the_username(String)[0m
+    [32mAnd [0m[32menter the password "[0m[32m[1msecret_sauce[0m[32m"[0m                         [90m# StepDefination.enter_the_password(String)[0m
+    [32mAnd [0m[32mclick on login button[0m                                     [90m# StepDefination.click_on_login_button()[0m
+    [32mThen [0m[32muser should see the products page[0m                        [90m# StepDefination.products()[0m
+
+  Scenario Outline: user add the product to cart                               [90m# src/test/resources/Feature/swaglab.feature:14[0m
+    [36mGiven [0m[36muser arrange the products in low price to high price "<price>"[0m
+    [36mWhen [0m[36muser select the product[0m
+    [36mAnd [0m[36muser click on back button and select another item[0m
+    [36mAnd [0m[36muser add the item into cart then remove the item and continue shopping[0m
+    [36mThen [0m[36muser see the backpack item[0m
+
+    Examples: 
+
+  Scenario Outline: user add the product to cart                               [90m# src/test/resources/Feature/swaglab.feature:23[0m
+    [32mGiven [0m[32muser arrange the products in low price to high price "[0m[32m[1mlohi[0m[32m"[0m          [90m# StepDefination.productprice(String)[0m
+    [32mWhen [0m[32muser select the product[0m                                               [90m# StepDefination.selectitem()[0m
+    [32mAnd [0m[32muser click on back button and select another item[0m                      [90m# StepDefination.back_to_item()[0m
+    [32mAnd [0m[32muser add the item into cart then remove the item and continue shopping[0m [90m# StepDefination.add_to_cart()[0m
+    [32mThen [0m[32muser see the backpack item[0m                                            [90m# StepDefination.application_logo()[0m
+
+  Scenario: user select another item                     [90m# src/test/resources/Feature/swaglab.feature:25[0m
+    [32mGiven [0m[32muser click on more option and select all items[0m [90m# StepDefination.allitems()[0m
+    [32mWhen [0m[32muser select the new item[0m                        [90m# StepDefination.newitem()[0m

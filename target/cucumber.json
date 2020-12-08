@@ -1,0 +1,213 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 12,
+        "name": "Registered user try to login into application",
+        "description": "",
+        "id": "user-login-into-swaglab-application;registered-user-try-to-login-into-application;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7605884800,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "open the application",
+            "match": {
+              "location": "StepDefination.startbrowser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 385860000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "enter the username \"standard_user\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "standard_user",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefination.enter_the_username(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 148869100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "enter the password \"secret_sauce\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "secret_sauce",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefination.enter_the_password(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1241829700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on login button",
+            "match": {
+              "location": "StepDefination.click_on_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 88334600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user should see the products page",
+            "match": {
+              "location": "StepDefination.products()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 23,
+        "name": "user add the product to cart",
+        "description": "",
+        "id": "user-login-into-swaglab-application;user-add-the-product-to-cart;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5202939200,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user arrange the products in low price to high price \"lohi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "lohi",
+                  "offset": 54
+                }
+              ],
+              "location": "StepDefination.productprice(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5405201800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user select the product",
+            "match": {
+              "location": "StepDefination.selectitem()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6470956800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user click on back button and select another item",
+            "match": {
+              "location": "StepDefination.back_to_item()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3690653500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user add the item into cart then remove the item and continue shopping",
+            "match": {
+              "location": "StepDefination.add_to_cart()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 76351900,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user see the backpack item",
+            "match": {
+              "location": "StepDefination.application_logo()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 25,
+        "name": "user select another item",
+        "description": "",
+        "id": "user-login-into-swaglab-application;user-select-another-item",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3353924300,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user click on more option and select all items",
+            "match": {
+              "location": "StepDefination.allitems()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 195785800,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user select the new item",
+            "match": {
+              "location": "StepDefination.newitem()"
+            },
+            "keyword": "When "
+          }
+        ]
+      }
+    ],
+    "name": "user login into swaglab application",
+    "description": "",
+    "id": "user-login-into-swaglab-application",
+    "keyword": "Feature",
+    "uri": "src/test/resources/Feature/swaglab.feature"
+  }
+]

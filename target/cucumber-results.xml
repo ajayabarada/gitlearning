@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="33.866591">
+<testcase classname="user login into swaglab application" name="Registered user try to login into application" time="9.470778">
+<system-out><![CDATA[Given open the application..................................................passed
+When enter the username "standard_user".....................................passed
+And enter the password "secret_sauce".......................................passed
+And click on login button...................................................passed
+Then user should see the products page......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user login into swaglab application" name="user add the product to cart" time="20.846103">
+<system-out><![CDATA[Given user arrange the products in low price to high price "lohi"...........passed
+When user select the product................................................passed
+And user click on back button and select another item.......................passed
+And user add the item into cart then remove the item and continue shopping..passed
+Then user see the backpack item.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user login into swaglab application" name="user select another item" time="3.54971">
+<system-out><![CDATA[Given user click on more option and select all items........................passed
+When user select the new item...............................................passed
+]]></system-out>
+</testcase>
+</testsuite>
